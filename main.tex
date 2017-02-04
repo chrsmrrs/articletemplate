@@ -1,0 +1,137 @@
+\documentclass[	
+	paper = a4,
+	fontsize = 11pt,
+	DIV = 12,
+	abstract = true
+	]{scrartcl}
+
+\usepackage[english]{babel}
+\usepackage{cmap}       
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{exscale}
+\usepackage[l2tabu, orthodox]{nag}
+
+\usepackage[
+	pdfa,
+	hidelinks,
+	pdftex, 
+	pdfdisplaydoctitle,
+	pdfpagelabels,
+	pdfauthor={Christopher Morris},
+  	pdftitle={My title},
+    pdfsubject={},
+	pdfkeywords={},
+   	pdfproducer={Latex with the hyperref package},
+	pdfcreator={pdflatex}
+]{hyperref}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[hyperref=true, useprefix=true, maxbibnames=8, backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{multirow}
+
+\usepackage[auth-lg]{authblk}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{thmtools}		
+\usepackage{mleftright}
+
+\usepackage{thm-restate}
+\usepackage[mathic=true]{mathtools}
+\usepackage[all, warning]{onlyamsmath}
+\usepackage{fixmath}
+\usepackage{units}
+
+\usepackage{enumitem}
+\setlist[enumerate]{noitemsep, topsep=0.5\topsep}
+\setlist[description]{noitemsep, topsep=0.5\topsep}
+\setlist[itemize]{noitemsep, topsep=0.5\topsep}
+
+% Let cleveref and thmtools work together
+\makeatletter
+\def\thmt@refnamewithcomma #1#2#3,#4,#5\@nil{%
+  \@xa\def\csname\thmt@envname #1utorefname\endcsname{#3}%
+  \ifcsname #2refname\endcsname
+    \csname #2refname\expandafter\endcsname\expandafter{\thmt@envname}{#3}{#4}%
+  \fi
+}
+\makeatother
+\usepackage[capitalise,noabbrev]{cleveref}   
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\usepackage{microtype}
+\usepackage{ellipsis}
+\usepackage{xspace}
+\usepackage{hfoldsty}
+
+% Select font.
+\usepackage[]{newtxtext,newtxmath}
+%\usepackage{fourier}
+%\usepackage{lmodern}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\algdef{SE}{ParForAllLoop}{EndParForAllLoop}[1]{\textbf{parallel for} \(\mbox{#1}\) \textbf{do}}{\textbf{end}}%
+
+\DeclareSymbolFont{usualmathcal}{OMS}{cmsy}{m}{n}
+\DeclareSymbolFontAlphabet{\mathcal}{usualmathcal}
+
+\addtokomafont{disposition}{\rmfamily}
+%\addtokomafont{title}{\normalfont}
+\addtokomafont{descriptionlabel}{\rmfamily}
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\newcommand{\new}[1]{\emph{#1}}
+\newcommand{\cA}{\ensuremath{{\mathcal A}}\xspace}
+\newcommand{\fA}{\ensuremath{\mathfrak{A}}\xspace}
+\newcommand{\fa}{\ensuremath{\mathfrak{a}}\xspace}
+\newcommand{\bA}{\ensuremath{{\bf A}}\xspace}
+\newcommand{\ba}{\ensuremath{{\bf a}}\xspace}
+\newcommand{\bbE}{\ensuremath{\mathbb{E}}}
+
+\recalctypearea
+
+\begin{document}
+
+\title{\LARGE Global Graph Kernels}
+
+\renewcommand\Affilfont{\large}
+\renewcommand\Authfont{\large}
+\setlength{\affilsep}{0.5em}
+\author[*]{Christopher Morris}
+\affil[*]{Department of Computer Science\\TU Dortmund University, Dortmund, Germany\\
+firstname.lastname@tu-dortmund.de}
+\date{\vspace*{-1.0em}\large\today\vspace*{-1.0em}}
+
+\maketitle
+
+\begin{abstract}
+Abstract.
+\end{abstract}
+
+\section{Introduction}
+
+\section{Main Part}
+
+\section{Conclusion}
+
+\printbibliography
+\end{document}
