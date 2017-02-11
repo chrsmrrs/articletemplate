@@ -13,21 +13,7 @@
 \usepackage{exscale}
 \usepackage[l2tabu, orthodox]{nag}
 
-\usepackage[
-	pdfa,
-	hidelinks,
-	pdftex, 
-	pdfdisplaydoctitle,
-	pdfpagelabels,
-	pdfauthor={Christopher Morris},
-  	pdftitle={My title},
-   	pdfsubject={},
-	pdfkeywords={},
-   	pdfproducer={Latex with the hyperref package},
-	pdfcreator={pdflatex}
-]{hyperref}
-
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 \usepackage[hyperref=true, useprefix=true, maxbibnames=8, backend=biber]{biblatex}
 \addbibresource{bibliography.bib}
 \usepackage{subcaption}
@@ -55,17 +41,6 @@
 \setlist[description]{noitemsep, topsep=0.5\topsep}
 \setlist[itemize]{noitemsep, topsep=0.5\topsep}
 
-% Let cleveref and thmtools work together
-\makeatletter
-\def\thmt@refnamewithcomma #1#2#3,#4,#5\@nil{%
-  \@xa\def\csname\thmt@envname #1utorefname\endcsname{#3}%
-  \ifcsname #2refname\endcsname
-    \csname #2refname\expandafter\endcsname\expandafter{\thmt@envname}{#3}{#4}%
-  \fi
-}
-\makeatother
-\usepackage[capitalise,noabbrev]{cleveref}   
-
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -88,7 +63,32 @@
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
-\algdef{SE}{ParForAllLoop}{EndParForAllLoop}[1]{\textbf{parallel for}\(\mbox{#1}\) \textbf{do}}{\textbf{end}}%
+\algdef{SE}{ParForAllLoop}{EndParForAllLoop}[1]{\textbf{parallel for}\(\mbox{#1}\) \textbf{do}}{\textbf{end}}
+
+\usepackage[
+pdfa,
+hidelinks,
+pdftex, 
+pdfdisplaydoctitle,
+pdfpagelabels,
+pdfauthor={Christopher Morris},
+pdftitle={My title},
+pdfsubject={},
+pdfkeywords={},
+pdfproducer={Latex with the hyperref package},
+pdfcreator={pdflatex}
+]{hyperref}
+
+% Let cleveref and thmtools work together
+\makeatletter
+\def\thmt@refnamewithcomma #1#2#3,#4,#5\@nil{%
+	\@xa\def\csname\thmt@envname #1utorefname\endcsname{#3}%
+	\ifcsname #2refname\endcsname
+	\csname #2refname\expandafter\endcsname\expandafter{\thmt@envname}{#3}{#4}%
+	\fi
+}
+\makeatother
+\usepackage[capitalise,noabbrev]{cleveref}   
 
 \DeclareSymbolFont{usualmathcal}{OMS}{cmsy}{m}{n}
 \DeclareSymbolFontAlphabet{\mathcal}{usualmathcal}
@@ -113,8 +113,8 @@
 \setlength{\affilsep}{0.5em}
 \author[*]{Christopher Morris}
 \affil[*]{Department of Computer Science\\TU Dortmund University, Dortmund, Germany\\
-firstname.lastname@tu-dortmund.de}
-\date{\vspace*{-1.0em}\large\today\vspace*{-1.0em}}
+\texttt{firstname.lastname@tu-dortmund.de}}
+\date{\vspace*{-1.0em}\small\today\vspace*{-1.0em}}
 
 \maketitle
 
