@@ -4,11 +4,10 @@
 	DIV = 12,
 	abstract = true
 ]{scrartcl}
-
 \usepackage[english]{babel}
-\usepackage{cmap}       
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{mmap}       
 
 \usepackage{exscale}
 \usepackage[l2tabu, orthodox]{nag}
@@ -16,6 +15,7 @@
 \usepackage{graphicx}
 \usepackage[hyperref=true, useprefix=true, maxbibnames=8, backend=biber]{biblatex}
 \addbibresource{bibliography.bib}
+\usepackage{caption}
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{url}
@@ -34,35 +34,6 @@
 \usepackage[mathic=true]{mathtools}
 \usepackage{fixmath}
 \usepackage{units}
-
-\usepackage{enumitem}
-\setlist[enumerate]{noitemsep, topsep=0.5\topsep}
-\setlist[description]{noitemsep, topsep=0.5\topsep}
-\setlist[itemize]{noitemsep, topsep=0.5\topsep}
-
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-
-\usepackage{microtype}
-\usepackage{ellipsis}
-\usepackage{xspace}
-\usepackage{hfoldsty}
-
-% Select font.
-\usepackage[]{newtxtext,newtxmath}
-%\usepackage{fourier}
-%\usepackage{lmodern}
-
-\usepackage{algorithm}
-\usepackage{algorithmicx}
-\usepackage{algpseudocode}
-\algdef{SE}{ParForAllLoop}{EndParForAllLoop}[1]{\textbf{parallel for}\(\mbox{#1}\) \textbf{do}}{\textbf{end}}
 
 \usepackage[
 pdfa,
@@ -88,6 +59,35 @@ pdfcreator={pdflatex}
 }
 \makeatother
 \usepackage[capitalise,noabbrev]{cleveref}   
+
+\usepackage{enumitem}
+\setlist[enumerate]{noitemsep, topsep=0.5\topsep}
+\setlist[description]{noitemsep, topsep=0.5\topsep}
+\setlist[itemize]{noitemsep, topsep=0.5\topsep}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\usepackage{microtype}
+\usepackage[xspace]{ellipsis}
+\usepackage{xspace}
+\usepackage{hfoldsty}
+
+% Select font.
+\usepackage[]{newtxtext,newtxmath}
+%\usepackage{fourier}
+%\usepackage{lmodern}
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\algdef{SE}{ParForAllLoop}{EndParForAllLoop}[1]{\textbf{parallel for}\(\mbox{#1}\) \textbf{do}}{\textbf{end}}
 
 \DeclareSymbolFont{usualmathcal}{OMS}{cmsy}{m}{n}
 \DeclareSymbolFontAlphabet{\mathcal}{usualmathcal}
